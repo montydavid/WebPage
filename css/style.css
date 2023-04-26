@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.cabecera{
+    top: 0;
+    width: 100%;
+    height: 250px;
+    background-image: url(../img/fondo5.jpg);
+    border-bottom: 1px solid transparent;
+    background-color: #a87b05;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-cabecera > img{
+    width: 100px;
+    height: 80px;
+    margin: 85px 20px 85px 20px;
+}
+
+.img-cabecera-principal > img{
+    width: 300px;
+    height: 80px;
+    margin: 85px 20px 85px 30px;
+}
+.parrafo-principal{
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid black;
+    background-color: black;
+    background-image: url(../img/control2.jpeg);
+}
+
+.parrafo-principal > h1{
+    color: #a71e1e;
+    text-align: center;
+    font-size: 100px;
+}
+
+.parrafo-principal p{
+    color: black;
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.imagen-ani{
+    display: flex;
+
+}
+
+.imagen-ani > img{
+    width: 100px;
+    height: 80px;
+    margin: 25px 0 0 30px;
+    animation: ease-in animacion .6s;
+}
+
+@keyframes animacion {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.subtitulo-lista{
+    width: 100%;
+    height: 100px;
+    background-color: #a87b05;
+    background-image: url(../img/fondo5.jpg);
+    justify-content: center;
+    text-align: center;
+}
+
+.subtitulo-lista > h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 80px;
+    text-decoration: none;
+} 
+
+.enlaces{
+    border-bottom: 1px solid transparent;
+}
+
+.primeros-enlaces{
+    top: 0px;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primeros-enlaces > a > img{
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+} 
+
+.segundos-enlaces{
+    top: 0px;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.segundos-enlaces > a > img{
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+} 
