@@ -123,3 +123,10 @@ body{
     margin-left: 50px;
     margin-top: 50px;
 } 
+.enlace-prueba{
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    text-align: center;
+}
+
