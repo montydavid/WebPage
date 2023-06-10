@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', 'sans-serif';
+            background: rgb(234,255,173);
+            background: linear-gradient(90deg, rgb(88, 177, 212) 0%, rgb(158, 68, 199) 100%);
+            height: 100vh;
+            display: flex;
+        }
+        .container{
+            max-width: 500px;
+            margin: auto;
+        }
+        .form-parcial{
+            
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #fff;
+        }
+
+        .line-form{
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .formulario-label{
+            width: 30%;
+            margin-left: 30px;
+        }
+
+        .formulario-input{
+            width: 80px;
+            margin-left: 40px;
+        }
+
+        .titulo{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            padding: 15px;
+            background-color: rgb(125, 173, 245);
+        }
+
+        .button{
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .volver{
+            margin-top: 15px;
+            text-align: center;
+        }
+        .volver > a{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+        }
+
+        input{
+            border-radius: 5px;
+        }
+
+        button{
+            padding: 0px 100px 0 100px;
+            border-radius: 10px;
+            box-shadow: rgb(19, 19, 19);
+            background-color: #fff;
+        }
+
+        button:hover{
+            background-color: rgb(154, 75, 206);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="" id="form" autocomplete="off">
+    <div class="form-parcial">
+        <div class="titulo">
+            <h1>Inicio de sesion</h1>
+        </div>
+        <div class="parrafo">
+            <p>Por favor ingresa tus datos para que de esta manera puedas interactuar de una mejor manera con la pagina y puedas dejar tus comentarios y opiniones sobre los diversos juegos</p>
+        </div>
+
+        <div class="line-form">
+            <div class="formulario-label">
+                <label for="nombre">Nombre de usuario:</label><br>
+                <label for="email">E-mail:</label><br>
+                <label for="password">Contraseña:</label><br>
+                <label for="repeat password">Repita la contraseña:</label><br>
+            </div>
+            <div class="formulario-input">
+                <input id="nombre" type="text">
+                <input id="email" type="text">
+                <input id="password" type="text">
+                <input id="repeat" type="text">
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit">Enviar</button>
+        </div>
+        <div class="volver">
+            <a href="">Volver atras</a>
+        </div>
+        <p id="espacioinfo"></p>
+    </form>
+    </div>
+</div>
+<script>
+    const form = document.getElementById("form");
+    const nombre = document.getElementById("nombre");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const repeat = document.getElementById("repeat");
+    form.addEventListener("submit", evento=>{
+        evento.preventDefault();
+        let emailval = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let info = "";
+        let verificar = false;
+        if(nombre.value.length < 2){
+            info += "el nombre debe ser mayor a 2 caracteres<br>";
+            verificar = true;
+        }
+        
+        if(!emailval.test(email.value)){
+            info += "el email es incorrecto<br>";
+            verificar = true;
+        }
+        if(password.value.length < 8){
+            info += "la contraseña debe tener 8 o mas caracteres<br>";
+            verificar = true;
+        }
+        if(!password.value == repeat.value){
+            info += "la contraseña debe ser igual<br>";
+            verificar = true;
+        }  
+        if(verificar){
+            espacioinfo.innerHTML = info;
+            espacioinfo.style.color = "red";
+        }
+        else{
+            espacioinfo.innerText = "enviado con exito";
+            espacioinfo.style.color = "green";
+        }
+    })
+</script>
+</body>
+</html>
