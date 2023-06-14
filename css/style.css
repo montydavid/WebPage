@@ -12,7 +12,7 @@ body{
 .cabecera{
     top: 0;
     width: 100%;
-    height: 250px;
+    height: auto;
     background-image: url(../img/fondo5.jpg);
     border-bottom: 1px solid transparent;
     background-color: #a87b05;
@@ -39,11 +39,17 @@ body{
 }
 #inicio{
     text-transform: uppercase;
+    font-size: 30px;
     padding: 10px 50px 10px 50px;
+    border-radius: 20px;
+}
+
+#inicio:hover{
+    background-color: #a71e1e;
 }
 .parrafo-principal{
     width: 100%;
-    height: 450px;
+    height: auto;
     border-bottom: 1px solid black;
     background-color: black;
     background-image: url(../img/control2.jpeg);
@@ -102,7 +108,7 @@ body{
 .primeros-enlaces{
     top: 0px;
     width: 100%;
-    height: 300px;
+    height: auto;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -119,7 +125,7 @@ body{
 .segundos-enlaces{
     top: 0px;
     width: 100%;
-    height: 300px;
+    height: auto;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -178,7 +184,13 @@ body{
     }
     #inicio{
         text-transform: uppercase;
+        font-size: 20px;
         padding: 5px 25px 5px 25px;
+        border-radius: 20px;
+    }
+    
+    #inicio:hover{
+        background-color: #a71e1e;
     }
     .parrafo-principal{
         width: 100%;
